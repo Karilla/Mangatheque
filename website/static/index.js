@@ -1,7 +1,7 @@
 var app = new Vue({
-    el: '#app',
+    el: '#app-5',
     data: {
-      message: Date().toString()
+      message: "Hello Vue"
     },
     delimiters: ['[[',']]']
   })
