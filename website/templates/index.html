@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+    
     <title>Hello World</title>
 </head>
 <body>
-    <p>Hello World</p>
+    <div id="app">
+        [[ message ]] 
+    </div>
+    <p>yooo</p>
+    <script src="{{ url_for('static', filename='index.js')}}"></script>
 </body>
 </html>
