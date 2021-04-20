@@ -21,6 +21,7 @@ nav
 
 .nav__links li{
     float: left;
+    list-style-type: none;
     
 }
 
