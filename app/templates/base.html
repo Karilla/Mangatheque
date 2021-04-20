@@ -9,15 +9,15 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul class="nav navbar-nav">
+        <nav class="navbar">
+            <ul class="nav__links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/login">Login</a></li>
                 <li><a href="/sign-up">Signup</a></li>
               </ul>
+              <a class="about" href="/about">About</a>
         </nav>
     </header>
-    <p>Es tu heureux ?</p>
     {% block content %} {% endblock %}
 </body>
 </html>

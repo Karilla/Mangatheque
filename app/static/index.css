@@ -10,14 +10,33 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
-nav{
-    background-color:red;
+nav
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
 
-header 
-{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 30px;
+.nav__links li{
+    float: left;
+    
+}
+
+.about{
+    float:right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav__links li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
