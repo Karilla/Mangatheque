@@ -23,15 +23,16 @@ def create_app(secret_key):
     from .views import views
     from .auth import auth
 
-    print("hmm")
     app.register_blueprint(views,url_prefix='/')
     app.register_blueprint(auth, url_prefix='/')
+
+    from .models import User, Manga, Tome
 
     create_database(app)
 
     return app
 
 def create_database(app):
-    if not path.exists('website/' + DB_NAME):
+    if not path.exists('app/' + DB_NAME):
         db.create_all(app=app)
         print("database created")
