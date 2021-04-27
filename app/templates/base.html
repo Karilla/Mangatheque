@@ -18,10 +18,13 @@
       <header>
         <nav>
             <ul class="nav__links">
+              {% if user.is_authenticated %}
                 <li><a href="/">Home</a></li>
+                <li><a href="/logout">Logout</a></li>
+                {% else %}
                 <li><a href="/login">Login</a></li>
                 <li><a href="/sign-up">Signup</a></li>
-                <li><a href="/signout">Signout</a></li>
+                {% endif %}
               </ul>
               <a class="about" href="/about">About</a>
         </nav>
