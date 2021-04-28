@@ -18,36 +18,14 @@
 
 <br />
 
-<ul class="list-group list-group-flush" id="notes">
+<ul class="list-group list-group-flush" id="manga">
+    {% for manga in user.manga %}
     <li class="list-group-item border">
-        One Piece
+        {{ manga.mangaName }}
         <button class="float-right btn btn-info" style="margin: 0px 10px;">Detail</button>
         <button class="float-right btn btn-warning" style="margin: 0px 10px;">Edit</button>
         <button class="float-right btn btn-danger" style="margin: 0px 10px;">Delete</button>
-    </li>
-    <li class="list-group-item border">
-        Bleach
-        <button class="float-right btn btn-info" style="margin: 0px 10px;">Detail</button>
-        <button class="float-right btn btn-warning" style="margin: 0px 10px;">Edit</button>
-        <button class="float-right btn btn-danger" style="margin: 0px 10px;">Delete</button>
-    </li>
-    <li class="list-group-item border">
-        Anohana
-        <button class="float-right btn btn-info" style="margin: 0px 10px;">Detail</button>
-        <button class="float-right btn btn-warning" style="margin: 0px 10px;">Edit</button>
-        <button class="float-right btn btn-danger" style="margin: 0px 10px;">Delete</button>
-    </li>
-    <li class="list-group-item border">
-        Bersekr
-        <button class="float-right btn btn-info" style="margin: 0px 10px;">Detail</button>
-        <button class="float-right btn btn-warning" style="margin: 0px 10px;">Edit</button>
-        <button class="float-right btn btn-danger" style="margin: 0px 10px;">Delete</button>
-    </li>
-    <li class="list-group-item border">
-        Naruto
-        <button class="float-right btn btn-info" style="margin: 0px 10px;">Detail</button>
-        <button class="float-right btn btn-warning" style="margin: 0px 10px;">Edit</button>
-        <button class="float-right btn btn-danger" style="margin: 0px 10px;">Delete</button>
-    </li>
-  </ul>
+        </li>
+    {% endfor %}
+</ul>
 {% endblock %}
