@@ -1,3 +1,3 @@
 # Mangatheque
 
-Je suis en train d'editer le readme
+Small web app about a Mangatheque !
