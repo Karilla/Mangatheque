@@ -10,19 +10,15 @@ views = Blueprint('views',__name__)
 @login_required
 def home():
     if request.method == 'POST':
-        mangaName = request.form.get('mangaName')
+        manga_name = request.form.get('mangaName')
         mangaAuthor = request.form.get('mangaAuthor')
 
-        manga = Manga.query.filter_by(mangaName=mangaName).first()
-
-        if manga:
-            flash('Manga already exists',category='error')
-        elif len(mangaName) > 20:
+        if len(manga_name) > 20:
             flash('Manga name too long (max 20 characters',category='error')
         elif len(mangaAuthor) > 25:
             flash('Manga author name too long (max 25 characters',category='error')
         else:
-            new_manga = Manga(mangaName=mangaName,author=mangaAuthor,user_id=current_user.id)
+            new_manga = Manga(manga_name=manga_name,author=mangaAuthor,user_id=current_user.id)
             db.session.add(new_manga)
             db.session.commit()
             flash('Manga added sucessfully',category='success')

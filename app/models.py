@@ -11,7 +11,7 @@ class User(db.Model,UserMixin):
 
 class Manga(db.Model):
     id = db.Column(db.Integer,primary_key = True)
-    mangaName = db.Column(db.String(150),unique=True) 
+    manga_name = db.Column(db.String(150))
     author = db.Column(db.String(150))
     tome = db.relationship('Tome')
     user_id = db.Column(db.Integer,db.ForeignKey('user.id'))
@@ -19,5 +19,5 @@ class Manga(db.Model):
 class Tome(db.Model):
     id = db.Column(db.Integer,primary_key = True)
     name = db.Column(db.String(150))
-    numberOfTome = (db.Integer)
+    number_tome = (db.Integer)
     manga_id = db.Column(db.Integer,db.ForeignKey('manga.id'))
