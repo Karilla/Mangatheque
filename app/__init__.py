@@ -12,7 +12,7 @@ def create_app(secret_key):
     app.config['SECRET_KEY'] = secret_key
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
     app.config['TEMPLATES_AUTO_RELOAD'] = True
-
+    print("coucou")
     #assets = Environment()
     #assets.init_app(app)
 
